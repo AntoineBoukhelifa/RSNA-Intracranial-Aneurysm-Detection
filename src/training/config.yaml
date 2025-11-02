@@ -1,0 +1,45 @@
+# src/training/config.yaml
+
+# =========================================================
+# 🧠 Configuration - RSNA Intracranial Aneurysm Detection
+# =========================================================
+
+# Dataset
+dataset:
+  csv_path: "/home/aboukhelifa/Bureau/rsna/data/train.csv"
+  series_root: "/media/aboukhelifa/HDD2/dataset_rsna/rsna-intracranial-aneurysm-detection/series/"
+  mode: "2d"               # "2d" or "3d"
+  augment: true
+  num_workers: 4
+
+# Model
+model:
+  name: "efficientnet_b0"
+  pretrained: true
+  num_classes: 14
+  in_channels: 1
+
+# Training
+train:
+  epochs: 20
+  batch_size: 8
+  learning_rate: 1e-4
+  optimizer: "adam"
+  weight_decay: 1e-5
+  scheduler: "cosine"      # options: "none", "step", "cosine"
+  step_size: 5
+  gamma: 0.5
+
+# Loss
+loss:
+  type: "bce"              # options: "bce", "focal"
+
+# Metrics
+metrics:
+  average: "macro"         # for AUC
+  pos_label: 1
+
+# Device
+device:
+  use_gpu: true
+  gpu_id: 0

@@ -1,0 +1,30 @@
+# ===========================
+# RSNA Intracranial Aneurysm Detection
+# Requirements file
+# ===========================
+
+# --- Base Python ---
+numpy>=1.23.5
+pandas>=2.2.0
+scipy>=1.14.0
+matplotlib>=3.8.0
+tqdm>=4.66.4
+PyYAML>=6.0
+
+# --- Medical Imaging ---
+pydicom>=2.4.4
+nibabel>=5.2.0           # utile si tu manipules des NIfTI plus tard
+SimpleITK>=2.3.1         # optionnel mais pratique pour resampling avancé
+
+# --- Deep Learning ---
+torch>=2.3.1
+torchvision>=0.18.1
+timm>=1.0.9              # pour EfficientNet / modèles modernes
+
+# --- Machine Learning utils ---
+scikit-learn>=1.5.0      # pour AUC et ROC
+opencv-python-headless==4.10.0.84  # lecture/écriture d’images sans GUI
+
+# --- Divers / utils ---
+Pillow>=10.3.0
+seaborn>=0.13.2          # pour plots (optionnel mais utile)
