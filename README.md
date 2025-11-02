@@ -44,6 +44,7 @@ Key goals:
 
 Example structure:
 
+'''bash
 data/
 ├── train.csv
 ├── train_localizers.csv
@@ -52,7 +53,7 @@ data/
 │ ├── 1.2.826.0.1.3680043.2055.1.dcm
 │ └── ...
 └── 1.2.826.0.1.3680043.2056/
-
+'''
 
 ---
 
